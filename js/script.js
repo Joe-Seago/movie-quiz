@@ -46,7 +46,7 @@ $(document).ready(function() {
 	// Upon clicking submit
 	$('.submitButton').click(function() {
 		// If our choice value is correct
-		if ($('input[name="radioSize"]:checked').length == 0 ) {
+		if ($('input[name="radioSize"]:checked').length() == 0 ) {
 			//movieLoop(movieQs);
 			console.log("dont pass")
 		} else if ($('input[name="radioSize"]:checked').val() === movieQs[qN].correct) {
