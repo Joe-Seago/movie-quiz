@@ -19,24 +19,38 @@
 
 $(document).ready(function() {
 
-	var movieQuestions = [{
-		question: 'What film is the character Maximus from?',
-		answer: ['Matrix', 'Toy Story', 'Gladiator', 'Lord of the Rings']
-	}, {
-		question: 'Which character is "The One" in The Matrix?',
-		answer: ['Morpheus', 'Agent Smith', 'Maximus', 'Neo']
-	}, {
-		question: 'Which character is NOT in Toy Story?',
-		answer: ['Buzz Lightyear', 'Fuzzy', 'Woody', 'Slinky']
-
-	}, {
-		question: 'Which actor played the character Luke Skywalker in Star Wars?',
-		answer: ['Harrison Ford', 'James Earl Jones', 'Mark Hamill', 'Steven Seagal']
-	}, {
-		question: 'What street did the character Rachel Dawes die on in Batman: Dark Knight?',
-		answer: ['Avenue X at Cicero', '1007 Mountain Drive', '250 52nd Street', '401 North Cicero Avenue']
-	}];
-
+	var movieQuestions = [
+		// Question 1
+		{
+			question: 'What film is the character Maximus from?',
+			answers: ['Matrix', 'Toy Story', 'Gladiator', 'Lord of the Rings'],
+			correct: 'Gladiator'
+		}, 
+		// Question 2
+		{
+			question: 'Which character is "The One" in The Matrix?',
+			answers: ['Morpheus', 'Agent Smith', 'Maximus', 'Neo'],
+			correct: 'Neo'
+		}, 
+		// Question 3
+		{
+			question: 'Which character is NOT in Toy Story?',
+			answers: ['Buzz Lightyear', 'Fuzzy', 'Woody', 'Slinky'],
+			correct: 'Fuzzy'
+		}, 
+		// Question 4
+		{
+			question: 'Which actor played the character Luke Skywalker in Star Wars?',
+			answers: ['Harrison Ford', 'James Earl Jones', 'Mark Hamill', 'Steven Seagal'],
+			correct: 'Steven Seagal'
+		}, 
+		// Question 5
+		{
+			question: 'What street did the character Rachel Dawes die on in Batman: Dark Knight?',
+			answers: ['Avenue X at Cicero', '1007 Mountain Drive', '250 52nd Street', '401 North Cicero Avenue'],
+			correct: '250 52nd Street'
+		}
+	];
 
 
 })
