@@ -16,6 +16,7 @@
 
 // Uses objects to represent the questions and answers
 
+var score = 0;
 
 $(document).ready(function() {
 
@@ -42,7 +43,7 @@ $(document).ready(function() {
 		{
 			question: 'Which actor played the character Luke Skywalker in Star Wars?',
 			answers: ['Harrison Ford', 'James Earl Jones', 'Mark Hamill', 'Steven Seagal'],
-			correct: 'Steven Seagal'
+			correct: 'Mark Hamill'
 		}, 
 		// Question 5
 		{
@@ -54,7 +55,26 @@ $(document).ready(function() {
 
 	$('.query').append('<p>' + movieQuestions[0].question + '</p>');
 
-	
-	$('.choiceList').append('<li>' + movieQuestions[0].answers[0] + '</li>');
+	for (var i = 0; i < movieQuestions[0].answers.length; i++) {
+		console.log(movieQuestions[0].answers[i])
+		$('.choices ul').append('<li><input type = "radio" name = "radioSize" value = "' + movieQuestions[0].answers[i] + '">' + movieQuestions[0].answers[i] + '</li>');
+	}
+
+	// Upon clicking submit
+	$('.submitButton').click(function () {
+
+		// If our choice value is correct
+		if ($('input[name="radioSize"]:checked.value() === "Gladiator"')) {
+			console.log("right!");
+		}
+			//Add to the score
+
+			// Move to next question
+	})
+		
+
+		
+
 
 })
+
