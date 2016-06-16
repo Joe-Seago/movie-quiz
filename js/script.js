@@ -61,15 +61,19 @@ $(document).ready(function() {
 	}
 
 	// Upon clicking submit
-	$('.submitButton').click(function () {
-
+	$('.submitButton').click(function() {
 		// If our choice value is correct
-		if ($('input[name="radioSize"]:checked.value() === "Gladiator"')) {
+		if ($('input[name="radioSize"]:checked').val() === movieQuestions[0].correct) {
+			score++;
 			console.log("right!");
+		} else {
+			console.log("you suck!");
 		}
 			//Add to the score
+		
 
 			// Move to next question
+			
 	})
 		
 
