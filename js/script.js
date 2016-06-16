@@ -1,20 +1,6 @@
-// Requires the user to answer at least five questions
-
-// Shows each question one at a time
-
-// Tells the user each question's number and how many questions remain
-
 // Prevents the user from skipping questions
 
-// Gives the user some way to answer each question
-
-// Compares the user's answer, and the correct answer to determine a score
-
-// Displays the user's final score once all questions have been answered
-
 // Allows the user to start a new game once all questions have been answered
-
-// Uses objects to represent the questions and answers
 
 var score = 0;
 var qN = 0;
@@ -60,12 +46,15 @@ $(document).ready(function() {
 	// Upon clicking submit
 	$('.submitButton').click(function() {
 		// If our choice value is correct
-		if ($('input[name="radioSize"]:checked').val() === movieQs[qN].correct) {
+		if ($('input[name="radioSize"]:checked').length == 0 ) {
+			//movieLoop(movieQs);
+			console.log("dont pass")
+		} else if ($('input[name="radioSize"]:checked').val() === movieQs[qN].correct) {
 			score++;
 			console.log("right!");
 			console.log(movieQs[qN].correct);
 		} else {
-			console.log("you suck!");
+			console.log("you are a horrible person!");
 		}
 			// Move to next question
 
@@ -74,6 +63,9 @@ $(document).ready(function() {
 			$('.numberBoard').text("You got " + score + " points total");
 			$('.submit').hide();
 			$('.quiz').hide();
+			
+			//var qN = 0;
+			//movieLoop(movieQs);
 		} else {
 
 			$('.choices ul').empty();
