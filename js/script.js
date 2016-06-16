@@ -52,5 +52,9 @@ $(document).ready(function() {
 		}
 	];
 
+	$('.query').append('<p>' + movieQuestions[0].question + '</p>');
+
+	
+	$('.choiceList').append('<li>' + movieQuestions[0].answers[0] + '</li>');
 
 })
